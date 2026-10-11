@@ -55,7 +55,11 @@ Avg T_turnaround = 1200/3 = 400
       使用SJF调度模式，会优先执行长度最小的job，但由于题目中给定的三个job长度相等，所以运行结果和FIFO模式相同。
 ```
 - 验证结果:
-- 分析:
+```
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q1_fifo.txt
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q1_sjf.txt
+```
+- 分析:预测正确
 
 # Q2
 - 题目:Now do the same but with jobs of different lengths: 100, 200, and 300.
@@ -114,7 +118,11 @@ Avg T_turnaround = 1000/3 = 333.33
 
 ```
 - 验证结果:
-- 分析:
+```
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q2_fifo.txt
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q2_sjf.txt
+```
+- 分析:预测正确
 
 # Q3
 - 题目:Now do the same, but also with the RR scheduler and a time-slice of 1.
@@ -158,7 +166,10 @@ Avg T_turnaround = 1397/3 ≈ 456.67
      job2从时间节点499开始执行，并执行101次，直到执行完成，此时时间节点来到600。就此，程序全部执行完毕。
 ```
 - 验证结果:
-- 分析:
+```
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q3_rr.txt
+```
+- 分析:预测正确
 
 # Q4
 - 题目:For what types of workloads does SJF deliver the same turnaround times as FIFO?
@@ -208,7 +219,10 @@ Total T_turnaround ≠ Total T_turnaround*
 所以，只有在job0_length ≤ job1_length ≤ job2_length时，SJF和FIFO工作模式所需的Total T_turnaround才相等。
 ```
 - 验证结果:
-- 分析:
+```
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q4.txt
+```
+- 分析:预测正确
 
 # Q5
 - 题目:For what types of workloads and quantum lengths does SJF deliver the same response times as RR?
@@ -259,7 +273,10 @@ Total T_response ≠ Total T_response*
 所以只有在job0_length = job1_length = job2_length，并且RR的时间片长度 q = job_length时，SJF和RR工作模式所需的Total T_response才相等。
 ```
 - 验证结果:
-- 分析:
+```
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q5.txt
+```
+- 分析:预测正确
 
 # Q6
 - 题目:What happens to response time with SJF as job lengths increase?Can you use the simulator to demonstrate the trend?
@@ -315,7 +332,10 @@ Total T_response* = 0+100+200 = 300
 所以，在SJF模式中，因为任务是按照job的长短顺序依次执行的。job的长度增加时，排在后面的job需要等待更长时间，响应时间也会增加。只是增加原有最长的一个job长度，总响应时间不改变。
 ```
 - 验证结果:
-- 分析:
+```
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q6.txt
+```
+- 分析:预测正确
 
 # Q7
 - 题目:What happens to response time with RR as quantum lengths increase? Can you write an equation that gives the worst-case response time, given N jobs?
@@ -372,4 +392,7 @@ Total T_response = 0+4+8+12 = 24
 最坏情况的响应时间：T_response(MAX) = (N-1)*q
 ```
 - 验证结果:
-- 分析:
+```
+/workspaces/ostep-codespace-lab/hw/chapter7/data/q7.txt
+```
+- 分析:预测正确

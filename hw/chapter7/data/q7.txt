@@ -1,0 +1,211 @@
+### 情况1
+ARG policy RR
+ARG jlist 10,20,30
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 10.0 )
+  Job 1 ( length = 20.0 )
+  Job 2 ( length = 30.0 )
+
+
+** Solutions **
+
+Execution trace:
+  [ time   0 ] Run job   0 for 1.00 secs
+  [ time   1 ] Run job   1 for 1.00 secs
+  [ time   2 ] Run job   2 for 1.00 secs
+  [ time   3 ] Run job   0 for 1.00 secs
+  [ time   4 ] Run job   1 for 1.00 secs
+  [ time   5 ] Run job   2 for 1.00 secs
+  [ time   6 ] Run job   0 for 1.00 secs
+  [ time   7 ] Run job   1 for 1.00 secs
+  [ time   8 ] Run job   2 for 1.00 secs
+  [ time   9 ] Run job   0 for 1.00 secs
+  [ time  10 ] Run job   1 for 1.00 secs
+  [ time  11 ] Run job   2 for 1.00 secs
+  [ time  12 ] Run job   0 for 1.00 secs
+  [ time  13 ] Run job   1 for 1.00 secs
+  [ time  14 ] Run job   2 for 1.00 secs
+  [ time  15 ] Run job   0 for 1.00 secs
+  [ time  16 ] Run job   1 for 1.00 secs
+  [ time  17 ] Run job   2 for 1.00 secs
+  [ time  18 ] Run job   0 for 1.00 secs
+  [ time  19 ] Run job   1 for 1.00 secs
+  [ time  20 ] Run job   2 for 1.00 secs
+  [ time  21 ] Run job   0 for 1.00 secs
+  [ time  22 ] Run job   1 for 1.00 secs
+  [ time  23 ] Run job   2 for 1.00 secs
+  [ time  24 ] Run job   0 for 1.00 secs
+  [ time  25 ] Run job   1 for 1.00 secs
+  [ time  26 ] Run job   2 for 1.00 secs
+  [ time  27 ] Run job   0 for 1.00 secs ( DONE at 28.00 )
+  [ time  28 ] Run job   1 for 1.00 secs
+  [ time  29 ] Run job   2 for 1.00 secs
+  [ time  30 ] Run job   1 for 1.00 secs
+  [ time  31 ] Run job   2 for 1.00 secs
+  [ time  32 ] Run job   1 for 1.00 secs
+  [ time  33 ] Run job   2 for 1.00 secs
+  [ time  34 ] Run job   1 for 1.00 secs
+  [ time  35 ] Run job   2 for 1.00 secs
+  [ time  36 ] Run job   1 for 1.00 secs
+  [ time  37 ] Run job   2 for 1.00 secs
+  [ time  38 ] Run job   1 for 1.00 secs
+  [ time  39 ] Run job   2 for 1.00 secs
+  [ time  40 ] Run job   1 for 1.00 secs
+  [ time  41 ] Run job   2 for 1.00 secs
+  [ time  42 ] Run job   1 for 1.00 secs
+  [ time  43 ] Run job   2 for 1.00 secs
+  [ time  44 ] Run job   1 for 1.00 secs
+  [ time  45 ] Run job   2 for 1.00 secs
+  [ time  46 ] Run job   1 for 1.00 secs
+  [ time  47 ] Run job   2 for 1.00 secs
+  [ time  48 ] Run job   1 for 1.00 secs ( DONE at 49.00 )
+  [ time  49 ] Run job   2 for 1.00 secs
+  [ time  50 ] Run job   2 for 1.00 secs
+  [ time  51 ] Run job   2 for 1.00 secs
+  [ time  52 ] Run job   2 for 1.00 secs
+  [ time  53 ] Run job   2 for 1.00 secs
+  [ time  54 ] Run job   2 for 1.00 secs
+  [ time  55 ] Run job   2 for 1.00 secs
+  [ time  56 ] Run job   2 for 1.00 secs
+  [ time  57 ] Run job   2 for 1.00 secs
+  [ time  58 ] Run job   2 for 1.00 secs
+  [ time  59 ] Run job   2 for 1.00 secs ( DONE at 60.00 )
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 28.00  Wait 18.00
+  Job   1 -- Response: 1.00  Turnaround 49.00  Wait 29.00
+  Job   2 -- Response: 2.00  Turnaround 60.00  Wait 30.00
+
+  Average -- Response: 1.00  Turnaround 45.67  Wait 25.67
+
+### 情况2
+ARG policy RR
+ARG jlist 10,20,30
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 10.0 )
+  Job 1 ( length = 20.0 )
+  Job 2 ( length = 30.0 )
+
+
+** Solutions **
+
+Execution trace:
+  [ time   0 ] Run job   0 for 2.00 secs
+  [ time   2 ] Run job   1 for 2.00 secs
+  [ time   4 ] Run job   2 for 2.00 secs
+  [ time   6 ] Run job   0 for 2.00 secs
+  [ time   8 ] Run job   1 for 2.00 secs
+  [ time  10 ] Run job   2 for 2.00 secs
+  [ time  12 ] Run job   0 for 2.00 secs
+  [ time  14 ] Run job   1 for 2.00 secs
+  [ time  16 ] Run job   2 for 2.00 secs
+  [ time  18 ] Run job   0 for 2.00 secs
+  [ time  20 ] Run job   1 for 2.00 secs
+  [ time  22 ] Run job   2 for 2.00 secs
+  [ time  24 ] Run job   0 for 2.00 secs ( DONE at 26.00 )
+  [ time  26 ] Run job   1 for 2.00 secs
+  [ time  28 ] Run job   2 for 2.00 secs
+  [ time  30 ] Run job   1 for 2.00 secs
+  [ time  32 ] Run job   2 for 2.00 secs
+  [ time  34 ] Run job   1 for 2.00 secs
+  [ time  36 ] Run job   2 for 2.00 secs
+  [ time  38 ] Run job   1 for 2.00 secs
+  [ time  40 ] Run job   2 for 2.00 secs
+  [ time  42 ] Run job   1 for 2.00 secs
+  [ time  44 ] Run job   2 for 2.00 secs
+  [ time  46 ] Run job   1 for 2.00 secs ( DONE at 48.00 )
+  [ time  48 ] Run job   2 for 2.00 secs
+  [ time  50 ] Run job   2 for 2.00 secs
+  [ time  52 ] Run job   2 for 2.00 secs
+  [ time  54 ] Run job   2 for 2.00 secs
+  [ time  56 ] Run job   2 for 2.00 secs
+  [ time  58 ] Run job   2 for 2.00 secs ( DONE at 60.00 )
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 26.00  Wait 16.00
+  Job   1 -- Response: 2.00  Turnaround 48.00  Wait 28.00
+  Job   2 -- Response: 4.00  Turnaround 60.00  Wait 30.00
+
+  Average -- Response: 2.00  Turnaround 44.67  Wait 24.67
+
+### 情况3
+ARG policy RR
+ARG jlist 10,20,30
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 10.0 )
+  Job 1 ( length = 20.0 )
+  Job 2 ( length = 30.0 )
+
+
+** Solutions **
+
+Execution trace:
+  [ time   0 ] Run job   0 for 3.00 secs
+  [ time   3 ] Run job   1 for 3.00 secs
+  [ time   6 ] Run job   2 for 3.00 secs
+  [ time   9 ] Run job   0 for 3.00 secs
+  [ time  12 ] Run job   1 for 3.00 secs
+  [ time  15 ] Run job   2 for 3.00 secs
+  [ time  18 ] Run job   0 for 3.00 secs
+  [ time  21 ] Run job   1 for 3.00 secs
+  [ time  24 ] Run job   2 for 3.00 secs
+  [ time  27 ] Run job   0 for 1.00 secs ( DONE at 28.00 )
+  [ time  28 ] Run job   1 for 3.00 secs
+  [ time  31 ] Run job   2 for 3.00 secs
+  [ time  34 ] Run job   1 for 3.00 secs
+  [ time  37 ] Run job   2 for 3.00 secs
+  [ time  40 ] Run job   1 for 3.00 secs
+  [ time  43 ] Run job   2 for 3.00 secs
+  [ time  46 ] Run job   1 for 2.00 secs ( DONE at 48.00 )
+  [ time  48 ] Run job   2 for 3.00 secs
+  [ time  51 ] Run job   2 for 3.00 secs
+  [ time  54 ] Run job   2 for 3.00 secs
+  [ time  57 ] Run job   2 for 3.00 secs ( DONE at 60.00 )
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 28.00  Wait 18.00
+  Job   1 -- Response: 3.00  Turnaround 48.00  Wait 28.00
+  Job   2 -- Response: 6.00  Turnaround 60.00  Wait 30.00
+
+  Average -- Response: 3.00  Turnaround 45.33  Wait 25.33
+
+### 情况4
+ARG policy RR
+ARG jlist 10,20,30
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 10.0 )
+  Job 1 ( length = 20.0 )
+  Job 2 ( length = 30.0 )
+
+
+** Solutions **
+
+Execution trace:
+  [ time   0 ] Run job   0 for 4.00 secs
+  [ time   4 ] Run job   1 for 4.00 secs
+  [ time   8 ] Run job   2 for 4.00 secs
+  [ time  12 ] Run job   0 for 4.00 secs
+  [ time  16 ] Run job   1 for 4.00 secs
+  [ time  20 ] Run job   2 for 4.00 secs
+  [ time  24 ] Run job   0 for 2.00 secs ( DONE at 26.00 )
+  [ time  26 ] Run job   1 for 4.00 secs
+  [ time  30 ] Run job   2 for 4.00 secs
+  [ time  34 ] Run job   1 for 4.00 secs
+  [ time  38 ] Run job   2 for 4.00 secs
+  [ time  42 ] Run job   1 for 4.00 secs ( DONE at 46.00 )
+  [ time  46 ] Run job   2 for 4.00 secs
+  [ time  50 ] Run job   2 for 4.00 secs
+  [ time  54 ] Run job   2 for 4.00 secs
+  [ time  58 ] Run job   2 for 2.00 secs ( DONE at 60.00 )
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 26.00  Wait 16.00
+  Job   1 -- Response: 4.00  Turnaround 46.00  Wait 26.00
+  Job   2 -- Response: 8.00  Turnaround 60.00  Wait 30.00
+
+  Average -- Response: 4.00  Turnaround 44.00  Wait 24.00
+
